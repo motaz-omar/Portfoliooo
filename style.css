@@ -1,0 +1,443 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-background: #191d2b;
+  --color-text-main: white;
+  --color-text-secondary: #27ae60;
+  --color-icon: #2c2f38;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--color-background);
+  height: 100vh;
+  transition: all 0.4s ease-in-out;
+}
+a {
+  text-decoration: none;
+}
+.icon {
+  color: white;
+}
+/* home styling */
+#home {
+  display: grid; /* grid */
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  height: 100%;
+  animation: appear 1s ease-in-out;
+}
+/* home photo and photo background styling */
+#photo-background {
+  background-color: var(--color-text-secondary);
+  width: 50%;
+  z-index: -1;
+  height: 100%;
+  position: absolute;
+  clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
+}
+#photo {
+  display: grid;
+  height: 100%;
+  place-items: center;
+}
+#person {
+  background-color: #0e0f14;
+}
+/* home text syling */
+#home-text {
+  color: var(--color-text-main);
+  font-size: 20px;
+  width: 400px;
+  display: grid;
+  place-content: center;
+  gap: 40px;
+}
+#home-title {
+  margin-bottom: 50px;
+}
+#home-description {
+  margin-bottom: 20px;
+}
+/* download button styling */
+.download {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid var(--color-text-secondary);
+  width: 250px;
+  border-radius: 30px;
+  padding: 5px;
+}
+
+.download:hover {
+  transition: all 0.4s ease-out;
+
+  background-color: var(--color-text-secondary);
+}
+
+.download-link {
+  color: var(--color-text-main);
+  font-size: 20px;
+}
+.download-icon {
+  background-color: var(--color-text-secondary);
+  margin-left: 30px;
+  padding: 10px;
+  border-radius: 30px;
+}
+/* about me page styling */
+#about-me {
+  color: var(--color-text-main);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  animation: appear 1s ease-in-out;
+}
+/* about me title styling */
+#about-title {
+  text-align: center;
+  font-size: 50px;
+  height: 180px;
+}
+/* description about me styling */
+#stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#stats-text {
+  display: grid;
+  row-gap: 50px;
+  line-height: 25px;
+  width: 300px;
+}
+
+#stats-description {
+  font-size: 22px;
+}
+/* achievements  styling */
+#achievements {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
+  width: auto;
+}
+/* every achievement styling */
+.achievement {
+  text-align: center;
+
+  border: 1px solid var(--color-text-secondary);
+  width: 150px;
+  padding: 15px;
+}
+/* every achievement description styling */
+.achievement-description {
+  font-size: 17px;
+}
+
+/* every achievement title styling */
+.achievement-title {
+  font-size: 35px;
+  color: var(--color-text-secondary);
+}
+
+/* skills div styling */
+#skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 50px auto 10px auto;
+  column-gap: 100px;
+  row-gap: 25px;
+}
+/* skill stats div syling */
+.percentage {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+/* skill bar div styling */
+.skill-percentage {
+  border: 1px solid black;
+  margin-left: 20px;
+  height: 10px;
+  width: 300px;
+}
+/* skill bar styling */
+.skill-percentage-bar {
+  background-color: var(--color-text-secondary);
+  width: 75%;
+  height: 100%;
+}
+/* projects page styling */
+#projects {
+  display: none;
+  animation: appear 1s ease-in-out;
+}
+/* projects styling */
+#projects-links {
+  display: grid;
+  grid-template-columns: repeat(3, 375px);
+  place-content: center;
+
+  gap: 30px;
+}
+.project-container {
+  position: relative;
+}
+.project-container img {
+  border-radius: 10%;
+}
+.website,
+.github {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin-left: 20px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.website:hover,
+.github:hover {
+  background-color: black;
+}
+.github:hover .hover-icon {
+  color: white;
+}
+.website:hover .hover-icon {
+  color: white;
+}
+
+.hover-icon {
+  font-size: 25px;
+  color: black;
+}
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  border-radius: 10%;
+
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  left: 0%;
+  top: 0%;
+}
+.project:hover {
+  opacity: 1;
+  color: var(--color-text-secondary);
+  background-color: var(--color-text-secondary);
+}
+/* projects title and description styling */
+#projects-title,
+#projects-description {
+  color: var(--color-text-main);
+  text-align: center;
+  margin-bottom: 30px;
+}
+#projects-description {
+  font-size: 20px;
+}
+#projects-title {
+  font-size: 30px;
+  margin-top: 30px;
+}
+/* contact page styling */
+#contact {
+  display: none;
+  gap: 46px;
+  place-content: center;
+  color: var(--color-text-main);
+  height: 100vh;
+  animation: appear 1s ease-in-out;
+}
+/* contact title styling */
+#contact-title {
+  text-align: center;
+  font-size: 50px;
+}
+/* contact div styling */
+#contact-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 60px;
+  width: 1000px;
+  height: 350px;
+  padding: 30px;
+  border: 2px solid white;
+}
+/* every info styling */
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.info .icon {
+  margin-right: 20px;
+}
+/* info details styling */
+.info-detail {
+  font-size: 21px;
+}
+/* links for contact websites */
+#contact-links {
+  display: flex;
+  gap: 30px;
+}
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.link:hover {
+  background-color: var(--color-text-secondary);
+  transition: all 0.4s ease-out;
+}
+
+/* switch between divs animation */
+@keyframes appear {
+  0% {
+    transform: translateY(-100%) scaleY(0);
+  }
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
+}
+/* switch between divs controls styling */
+#control-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 30%;
+  right: 1%;
+}
+.website-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-icon);
+  margin-bottom: 10px;
+}
+/* light button mode styling */
+#theme-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--color-text-secondary);
+  margin-bottom: 10px;
+}
+#theme {
+  position: fixed;
+  top: 5%;
+  right: 1%;
+}
+/* light mode styling */
+.light-mode {
+  --color-background: white;
+  --color-text-main: black;
+  --color-text-secondary: #f56692;
+}
+/* highlight */
+.highlight {
+  color: var(--color-text-secondary);
+}
+/* phone website styling */
+@media (min-width: 300px) and (max-width: 700px) {
+  #home {
+    grid-template-columns: 1fr;
+    gap: 17px;
+
+    place-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  #photo-background {
+    display: none;
+  }
+  #person {
+    height: 300px;
+  }
+
+  #home-text {
+    width: 300px;
+    gap: 7px;
+    padding-bottom: 100px;
+  }
+  #home-description {
+    font-size: 16px;
+  }
+
+  #home-title {
+    font-size: 24px;
+  }
+  #about-me {
+    padding-bottom: 100px;
+  }
+  #stats {
+    display: grid;
+    place-items: center;
+    gap: 50px;
+  }
+  #achievements {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+  #skills {
+    grid-template-columns: 1fr;
+    padding-bottom: 100px;
+  }
+
+  #projects-links {
+    grid-template-columns: 375px;
+    padding-bottom: 100px;
+  }
+  #contact {
+    padding-top: 50px;
+    gap: 25px;
+    height: auto;
+  }
+  #contact-info {
+    width: auto;
+    height: auto;
+  }
+  .info {
+    flex-direction: column;
+  }
+  #contact-links {
+    padding-bottom: 90px;
+  }
+  /* switch between divs controls styling for phone */
+  #control-btn {
+    display: flex;
+    top: auto;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+  }
+}
