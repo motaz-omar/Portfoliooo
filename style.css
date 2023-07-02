@@ -236,6 +236,18 @@ a {
   color: var(--color-text-secondary);
   background-color: var(--color-text-secondary);
 }
+.project-text-img {
+  background-color: black;
+  color: white;
+  width: 375px;
+  height: 433px;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 40px;
+}
 /* projects title and description styling */
 #projects-title,
 #projects-description {
