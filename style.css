@@ -45,6 +45,7 @@ a {
 }
 #person {
   background-color: #0e0f14;
+  width: 400px;
 }
 /* home text syling */
 #home-text {
@@ -167,7 +168,7 @@ a {
 /* skill bar styling */
 .skill-percentage-bar {
   background-color: var(--color-text-secondary);
-  width: 75%;
+
   height: 100%;
 }
 /* projects page styling */
@@ -389,6 +390,7 @@ a {
   }
   #person {
     height: 300px;
+    width: 250px;
   }
 
   #home-text {
@@ -452,4 +454,13 @@ a {
     transform: translateX(-50%);
     width: 80%;
   }
+}
+#css {
+  width: 60%;
+}
+#html {
+  width: 80%;
+}
+#javascript {
+  width: 30%;
 }
